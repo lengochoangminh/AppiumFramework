@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Basic Demo with TestNG">
+    <test name="Basic Demo">
+        <classes>
+            <class name="appium2.AndroidDemo"/>
+        </classes>
+    </test>
+</suite>
