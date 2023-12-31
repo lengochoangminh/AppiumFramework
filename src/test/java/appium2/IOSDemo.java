@@ -3,8 +3,11 @@ package appium2;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.options.XCUITestOptions;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -34,9 +37,28 @@ public class IOSDemo {
     }
 
     @Test()
-    public void TestScenario() throws InterruptedException {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(new AppiumBy.ByAccessibilityId("Photo Demo"))).click();
-        Thread.sleep(3000);
+    public void loginScreen_verify_to_show_error_message_for_invalid_credential() throws InterruptedException {
+        // Find element by Accessibility Id
+        wait.until(ExpectedConditions.visibilityOfElementLocated(
+                new AppiumBy.ByAccessibilityId("Login Screen"))).click();
+
+        // Find element by iOSClassChain
+        WebElement txtUserName = driver.findElement(
+                AppiumBy.iOSClassChain("**/XCUIElementTypeTextField[`label == \"username\"`]"));
+        wait.until(ExpectedConditions.visibilityOf(txtUserName)).sendKeys("admin");
+
+        // Find element by iOS Predicate String
+        WebElement txtPassword = driver.findElement(
+                AppiumBy.iOSNsPredicateString("label == 'password' AND name == 'password' AND value == 'Password'"));
+        wait.until(ExpectedConditions.visibilityOf(txtPassword)).sendKeys("admin");
+
+        // Find element by XPath
+        driver.findElement(
+                By.xpath("//XCUIElementTypeOther[@name='loginBtn' and @accessible='true']")).click();
+
+        WebElement errorMessage = driver.findElement(
+                By.xpath("//XCUIElementTypeStaticText[@name='Invalid login credentials, please try again']"));
+        Assert.assertTrue(errorMessage.isDisplayed());
     }
 
     @AfterMethod

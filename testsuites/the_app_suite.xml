@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Hands-on with The App">
+    <listeners>
+        <listener class-name="theApp.listener.ExtentReportListener"></listener>
+    </listeners>
+    <test name="LoginScreen">
+        <classes>
+            <class name="theApp.TheAppTest"/>
+        </classes>
+    </test>
+</suite>

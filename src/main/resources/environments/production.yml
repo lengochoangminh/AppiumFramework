@@ -1,0 +1,14 @@
+# gateway
+gateway: gatewayProd
+apiKey: apiKey_Prod
+clientSecret: clientSecret_Prod
+
+# postgresql
+dbUrl: dbUrl_Prod
+dbUserName: dbUserName_Prod
+dbPassword: dbPassword_Prod
+
+# Kafka
+broker: 10.40.26.222:9092
+avlTopic: aggregateAVLEvents-p01usw2Prod
+avlEventTopic: avlEvents-p01usw2Prod
