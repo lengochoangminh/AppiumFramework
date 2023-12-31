@@ -4,5 +4,11 @@
 - The demo application can be downloaded at https://github.com/appium-pro/TheApp/releases
 
 ## How to run 
- - Launch Appium 2.0 Server + Android/iOS emulator 
- - Terminal > $ mvn clean test -Dsuite="testsuite.xml"
+ - Manually start the Appium 2.0 server & the emulators (Android or iOS) 
+ - Execute test cases from command line:
+   - ```$ mvn clean test -Dsuite="testsuite.xml" -Dtest="appium2.AndroidDemo"```
+   - ```$ mvn clean test -Dsuite="testsuite.xml" -Dtest="appium2.IOSDemo"```
+
+## Key Takeaways
+ - Appium 2.0
+ - Locator Strategies in Appium such as iOSClassChain, iOS Predicate String, AndroidUIAutomator

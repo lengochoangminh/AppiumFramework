@@ -1,8 +1,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Basic Demo with TestNG">
-    <test name="Basic Demo">
+    <test name="ANDROID">
         <classes>
             <class name="appium2.AndroidDemo"/>
+        </classes>
+    </test>
+    <test name="IOS">
+        <classes>
+            <class name="appium2.IOSDemo"/>
         </classes>
     </test>
 </suite>
