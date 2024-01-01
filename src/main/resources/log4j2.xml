@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Properties>
+        <Property name="CONSOLE_APPENDER">%style{%date{DEFAULT}}{yellow} %highlight{%-5level}{FATAL=bg_red, ERROR=red, WARN=yellow, INFO=green} %message \n</Property>
+        <Property name="ROLLING_ACCESS_FILE">%d %p %c{1.} [%t] %m%n</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout>
+                <Pattern>${CONSOLE_APPENDER}</Pattern>
+            </PatternLayout>
+        </Console>
+
+        <RollingRandomAccessFile name="LogToRollingRandomAccessFile" fileName="logs/app.log"
+                                 filePattern="logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>${ROLLING_ACCESS_FILE}</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="1 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingRandomAccessFile>
+
+    </Appenders>
+
+    <Loggers>
+
+        <Logger name="myTestLog4j" level="info" additivity="false">
+            <AppenderRef ref="LogToRollingRandomAccessFile"/>
+            <AppenderRef ref="ConsoleAppender"/>
+        </Logger>
+
+        <Root level="info">
+            <AppenderRef ref="ConsoleAppender"/>
+        </Root>
+
+    </Loggers>
+</Configuration>

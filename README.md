@@ -1,14 +1,20 @@
 # Mobile Automation with Appium 
 - Framework to hands-on or learn the new Appium's features updated
-- Using "TheApp" to hands-on with Android v1.12.0 / iOS (old version)  
+- Using "theApp" to hands-on with Android v1.12.0 / iOS (old version)  
 - The demo application can be downloaded at https://github.com/appium-pro/TheApp/releases
 
 ## How to run 
  - Manually start the Appium 2.0 server & the emulators (Android or iOS) 
- - Execute test cases from command line:
+ - For Appium 2.0 showcases:
    - ```$ mvn clean test -Dsuite="testsuite.xml" -Dtest="appium2.AndroidDemo"```
    - ```$ mvn clean test -Dsuite="testsuite.xml" -Dtest="appium2.IOSDemo"```
-
+ - For The App showcases:
+   - ```$ mvn clean test -Dsuite="the_app_suite.xml" -Dplatform=ANDROID -Denv=DEMO```
+   
 ## Key Takeaways
- - Appium 2.0
+ - Cross-platform with Appium 2.0 - Page Object Factory
  - Locator Strategies in Appium such as iOSClassChain, iOS Predicate String, AndroidUIAutomator
+ - ApacheLog4j v2
+ - Extent Report 5.0.9
+ - Custom Exception to handle the exception thrown 
+ - Read the configurations, and test data of specific environments from Configuration.Properties, YAML, or JSON files

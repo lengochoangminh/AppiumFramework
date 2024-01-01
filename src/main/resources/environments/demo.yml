@@ -1,0 +1,14 @@
+# gateway
+gateway: gatewayDemo
+apiKey: apiKey_demo
+clientSecret: clientSecret_demo
+
+# postgresql
+dbUrl: dbUrl_demo
+dbUserName: dbUserName_demo
+dbPassword: dbPassword_demo
+
+# Kafka
+broker: 10.40.26.222:9092
+avlTopic: aggregateAVLEvents-p01usw2demo
+avlEventTopic: avlEvents-p01usw2demo

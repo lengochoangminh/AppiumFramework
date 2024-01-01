@@ -36,7 +36,7 @@
         <selenium.remote.driver.version>4.13.0</selenium.remote.driver.version>
         <testng.version>7.9.0</testng.version>
         <appium.client.version>9.0.0</appium.client.version>
-        <log4j.version>2.18.0</log4j.version>
+        <log4j.version>2.22.1</log4j.version>
         <yaml.version>2.8.11</yaml.version>
         <jackson.databind.version>2.9.6</jackson.databind.version>
         <jackson-core.version>2.11.1</jackson-core.version>
@@ -45,7 +45,6 @@
         <opencv.version>4.5.1-2</opencv.version>
         <javas.mail>1.4</javas.mail>
         <extent.reports.version>5.0.9</extent.reports.version>
-        <allure-testng-version>2.13.9</allure-testng-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <aspectj.version>1.9.9.1</aspectj.version>
         <kafka.version>3.2.1</kafka.version>
@@ -137,11 +136,6 @@
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
             <version>${extent.reports.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-testng</artifactId>
-            <version>${allure-testng-version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.kafka</groupId>

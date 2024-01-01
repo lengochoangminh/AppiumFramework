@@ -1,0 +1,14 @@
+# gateway
+gateway: gatewayStage
+apiKey: apiKey_stage
+clientSecret: clientSecret_stage
+
+# postgresql
+dbUrl: dbUrl_stage
+dbUserName: dbUserName_stage
+dbPassword: dbPassword_stage
+
+# Kafka
+broker: 10.40.26.222:9092
+avlTopic: aggregateAVLEvents-p01usw2stage
+avlEventTopic: avlEvents-p01usw2stage

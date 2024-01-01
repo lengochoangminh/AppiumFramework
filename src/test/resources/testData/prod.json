@@ -1,0 +1,14 @@
+{
+  "studentManagement": {
+    "studentId": "PROD_d1e9fff6-d397-4b43-a111-c4e982fbccf0",
+    "firstName": "auto",
+    "lastName": "2trips",
+    "districtId": "123",
+    "year": "2017",
+    "month": "01",
+    "day": "01",
+    "schoolId": "19d90d46-b4e9-4320-a3d3-33a5a7e39c7d",
+    "schoolName": "Automation School 1",
+    "schoolCode": "123"
+  }
+}
