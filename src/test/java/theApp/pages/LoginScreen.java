@@ -30,22 +30,24 @@ public class LoginScreen extends TheAppPageObject {
     private WebElement loginFailedMessage;
 
     public void login(String username, String pass) {
-        logger.debug("Log in with account " + username + "/" + pass);
         elementHelper.inputText(txtUsername, username);
         elementHelper.inputText(txtPassword, pass);
         elementHelper.click(btnLogin);
     }
 
     public String getFailureMessage() {
-        logger.debug("Get the failure message");
         waitHelper.waitUntilElementDisplayed(loginFailedMessage);
         return elementHelper.getText(loginFailedMessage);
     }
 
     public boolean displayFailureMessage() {
-        logger.debug("Verify whether the failure message is displayed?");
         waitHelper.waitUntilElementDisplayed(loginFailedMessage);
         return loginFailedMessage.isDisplayed();
+    }
+
+    public boolean isOnLoginScreen() {
+        waitHelper.waitUntilElementDisplayed(txtUsername);
+        return txtUsername.isDisplayed() && txtPassword.isDisplayed();
     }
 
 }

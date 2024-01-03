@@ -14,11 +14,20 @@ public class DashBoard extends TheAppPageObject {
     @iOSXCUITFindBy(accessibility = "Login Screen")
     private WebElement logoScreen;
 
+    @AndroidFindBy(accessibility = "Webview Demo")
+    @iOSXCUITFindBy(accessibility = "Webview Demo")
+    private WebElement webViewDemo;
+
     public DashBoard(AppiumDriver driver) {
         super(driver);
     }
+
     public void selectLoginScreen() {
-        logger.debug("Select Login Screen from Dashboard");
+        waitHelper.waitUntilElementDisplayed(logoScreen);
         elementHelper.click(logoScreen);
+    }
+
+    public void selectWebViewDemo() {
+        elementHelper.click(webViewDemo);
     }
 }

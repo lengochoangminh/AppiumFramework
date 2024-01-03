@@ -3,9 +3,15 @@
     <listeners>
         <listener class-name="theApp.listener.ExtentReportListener"></listener>
     </listeners>
-    <test name="LoginScreen">
+    <test name="Smoke Test">
         <classes>
-            <class name="theApp.TheAppTest"/>
+            <class name="theApp.TC001_LoginScreen"/>
+        </classes>
+    </test>
+    <test name="Normal">
+        <classes>
+            <class name="theApp.TC002_HandDeepLink"/>
+            <class name="theApp.TC003_WebViewTest"/>
         </classes>
     </test>
 </suite>
