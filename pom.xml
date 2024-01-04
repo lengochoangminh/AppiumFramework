@@ -58,6 +58,7 @@
         <json-schema-validator.version>4.0.0</json-schema-validator.version>
         <common.lang.version>2.5</common.lang.version>
         <jjwt.version>0.7.0</jjwt.version>
+        <google.zxing.version>3.3.0</google.zxing.version>
     </properties>
 
     <dependencies>
@@ -197,6 +198,16 @@
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
             <version>${jjwt.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>${google.zxing.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>javase</artifactId>
+            <version>${google.zxing.version}</version>
         </dependency>
     </dependencies>
 

@@ -18,3 +18,5 @@
  - Extent Report 5.0.9
  - Custom Exception to handle the exception thrown 
  - Read the configurations, and test data of specific environments from Configuration.Properties, YAML, or JSON files
+ - Navigation by the deeplink
+ - Handle the QR Code Test

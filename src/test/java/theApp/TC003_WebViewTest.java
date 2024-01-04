@@ -15,13 +15,13 @@ public class TC003_WebViewTest extends BaseSetup {
         dashboard = new DashBoard(appiumDriver);
         webviewDemo = new WebviewDemo(appiumDriver);
 
-        executionLogs("Select Webview Demo Menu");
+        printExecutionLogs("Select Webview Demo Menu");
         dashboard.selectWebViewDemo();
 
-        executionLogs("Enter & navigate to the URL");
+        printExecutionLogs("Enter & navigate to the URL");
         webviewDemo.navigateURL("https://www.google.com");
 
-        executionLogs("Verify whether the failure message is displayed?");
+        printExecutionLogs("Verify whether the failure message is displayed?");
         Assert.assertTrue(webviewDemo.displayFailureMessage());
     }
 }

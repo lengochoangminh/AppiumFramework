@@ -10,7 +10,7 @@
     </test>
     <test name="Normal">
         <classes>
-            <class name="theApp.TC002_HandDeepLink"/>
+            <class name="theApp.TC002_HandDeepLinkAndQRCode"/>
             <class name="theApp.TC003_WebViewTest"/>
         </classes>
     </test>

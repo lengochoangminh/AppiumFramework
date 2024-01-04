@@ -151,9 +151,9 @@ public class BaseSetup {
         }
     }
 
-    public static void executionLogs(String message) {
-        test.info(message);
+    public static void printExecutionLogs(String message) {
         logger.info(message);
+        test.info(message);
     }
 
     @BeforeSuite
