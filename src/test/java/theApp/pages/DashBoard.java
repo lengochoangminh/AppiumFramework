@@ -23,12 +23,11 @@ public class DashBoard extends TheAppPageObject {
     }
 
     public void selectLoginScreen() {
-        logger.debug("Select Login Screen from Dashboard");
+        waitHelper.waitUntilElementDisplayed(logoScreen);
         elementHelper.click(logoScreen);
     }
 
     public void selectWebViewDemo() {
-        logger.debug("Select WebView Demo from Dashboard");
         elementHelper.click(webViewDemo);
     }
 }

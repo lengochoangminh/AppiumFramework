@@ -151,6 +151,11 @@ public class BaseSetup {
         }
     }
 
+    public static void printExecutionLogs(String message) {
+        logger.info(message);
+        test.info(message);
+    }
+
     @BeforeSuite
     public void startServer() throws IOException {
         initializeReport();

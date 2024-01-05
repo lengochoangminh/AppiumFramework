@@ -32,13 +32,11 @@ public class WebviewDemo extends TheAppPageObject {
     private WebElement alertTitle;
 
     public void navigateURL(String url) {
-        logger.debug("Enter the URL and click Go to navigate");
         elementHelper.inputText(urlInput, url);
         elementHelper.click(navigateBtn);
     }
 
     public boolean displayFailureMessage() {
-        logger.debug("Verify whether the failure message is displayed?");
         waitHelper.waitUntilElementDisplayed(alertTitle);
         return alertTitle.isDisplayed();
     }

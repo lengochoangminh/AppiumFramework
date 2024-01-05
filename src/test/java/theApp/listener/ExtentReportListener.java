@@ -20,7 +20,7 @@ public class ExtentReportListener extends BaseSetup implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        test.log(Status.PASS, MarkupHelper.createLabel(result.getName().toUpperCase() + " PASS", ExtentColor.GREEN));
+        test.log(Status.PASS, MarkupHelper.createLabel("Test case is PASSED", ExtentColor.GREEN));
     }
 
     @Override
