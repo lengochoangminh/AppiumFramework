@@ -6,12 +6,13 @@
     <test name="Smoke Test">
         <classes>
             <class name="theApp.TC001_LoginScreen"/>
+            <class name="theApp.TC002_WebViewTest"/>
         </classes>
     </test>
     <test name="Normal">
         <classes>
-            <class name="theApp.TC002_HandDeepLinkAndQRCode"/>
-            <class name="theApp.TC003_WebViewTest"/>
+            <class name="theApp.TC003_HandDeepLinkAndQRCode"/>
+            <class name="theApp.TC004_VisualTestWithImagePlugin"/>
         </classes>
     </test>
 </suite>

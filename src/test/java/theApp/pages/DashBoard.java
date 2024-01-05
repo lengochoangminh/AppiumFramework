@@ -18,6 +18,10 @@ public class DashBoard extends TheAppPageObject {
     @iOSXCUITFindBy(accessibility = "Webview Demo")
     private WebElement webViewDemo;
 
+    @AndroidFindBy(accessibility = "Photo Demo")
+    @iOSXCUITFindBy(accessibility = "Photo Demo")
+    private WebElement photoDemo;
+
     public DashBoard(AppiumDriver driver) {
         super(driver);
     }
@@ -28,6 +32,10 @@ public class DashBoard extends TheAppPageObject {
     }
 
     public void selectWebViewDemo() {
-        elementHelper.click(webViewDemo);
+        waitHelper.waitUntilElementDisplayed(webViewDemo).click();
+    }
+
+    public void selectPhotoDemo() {
+        waitHelper.waitUntilElementDisplayed(photoDemo).click();
     }
 }

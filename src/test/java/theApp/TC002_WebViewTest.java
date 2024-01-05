@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import theApp.pages.DashBoard;
 import theApp.pages.WebviewDemo;
 
-public class TC003_WebViewTest extends BaseSetup {
+public class TC002_WebViewTest extends BaseSetup {
 
     private DashBoard dashboard;
     private WebviewDemo webviewDemo;
