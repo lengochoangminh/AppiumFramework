@@ -20,3 +20,7 @@
  - Read the configurations, and test data of specific environments from Configuration.Properties, YAML, or JSON files
  - Navigation by the deeplink
  - Handle the QR Code Test
+ - Visual Test with the image plugin. 
+   - Require to start the appium with Image plugins attached: ```appium --use-plugins=images```
+   - Find the image matching with the specific threshold.
+   - Image Comparison

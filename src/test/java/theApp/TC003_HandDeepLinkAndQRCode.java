@@ -17,7 +17,7 @@ import com.google.zxing.common.HybridBinarizer;
 
 import javax.imageio.ImageIO;
 
-public class TC002_HandDeepLinkAndQRCode extends BaseSetup {
+public class TC003_HandDeepLinkAndQRCode extends BaseSetup {
 
     @Test
     public void verify_the_user_read_qr_code() throws IOException {
