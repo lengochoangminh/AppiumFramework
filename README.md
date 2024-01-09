@@ -6,10 +6,11 @@
 ## How to run 
  - Manually start the Appium 2.0 server & the emulators (Android or iOS) 
  - For Appium 2.0 showcases:
-   - ```$ mvn clean test -Dsuite="testsuite.xml" -Dtest="appium2.AndroidDemo"```
-   - ```$ mvn clean test -Dsuite="testsuite.xml" -Dtest="appium2.IOSDemo"```
+   - ```mvn clean test -Dsuite="testsuite.xml" -Dtest="appium2.AndroidDemo"```
+   - ```mvn clean test -Dsuite="testsuite.xml" -Dtest="appium2.IOSDemo"```
  - For The App showcases:
-   - ```$ mvn clean test -Dsuite="the_app_suite.xml" -Dplatform=ANDROID -Denv=DEMO```
+   - ```appium --use-plugins=images```
+   - ```mvn clean test -Dsuite="the_app_suite.xml" -Dplatform=ANDROID -Denv=DEMO```
    
 ## Key Takeaways
  - Cross-platform with Appium 2.0 - Page Object Factory
